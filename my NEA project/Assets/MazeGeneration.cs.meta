@@ -7,6 +7,9 @@ MonoImporter:
   - wallCell: {fileID: 9165621906193592171, guid: 80107ceec05c7cf47ba38058192e49d1, type: 3}
   - floorCell: {fileID: 8258669522395915881, guid: f7458c7e90808e74bafa23bcc9189c78, type: 3}
   - finishCell: {fileID: 8396518319500972784, guid: 69b9c15585587d840bf4a3306be479a8, type: 3}
+  - ExitCell: {fileID: 8492775234582262174, guid: 21d5ccda6b8a2de479d8a57c6db15551, type: 3}
+  - ExitCell1: {fileID: 7231699754660157419, guid: 793896bfe1fd66848aea327df3483fb7, type: 3}
+  - ceilingCell: {fileID: 5462452575858281574, guid: 8d0efd52f78b71a438e2fcd11ebfd99f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

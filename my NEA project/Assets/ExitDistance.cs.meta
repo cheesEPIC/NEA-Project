@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a402b4948471a3043a354479b110fe3c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ExitCell: {fileID: 8492775234582262174, guid: 21d5ccda6b8a2de479d8a57c6db15551, type: 3}
+  - ExitCell1: {fileID: 7231699754660157419, guid: 793896bfe1fd66848aea327df3483fb7, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

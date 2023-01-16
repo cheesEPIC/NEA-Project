@@ -15,7 +15,13 @@ public class MazeGeneration : MonoBehaviour
 
     public GameObject wallCell;
     public GameObject floorCell;
-    public GameObject finishCell;
+    public GameObject ExitCell;
+    public GameObject ExitCell1;
+    public GameObject ceilingCell;
+
+    public static int xPos = 1;
+    public static int yPos = 1;
+    public static int decider = 1;
 
 
     void Start()
@@ -55,8 +61,6 @@ public class MazeGeneration : MonoBehaviour
             }
         }
 
-
-        Debug.Log(seedNum);
 
         long seedNum2 = seedNum;
         seedNum2 = seedNum * seedNum * seedNum;
@@ -169,7 +173,6 @@ public class MazeGeneration : MonoBehaviour
         CurrentY = 1;
 
 
-
         visitedX.Push(1);
         visitedY.Push(1);
 
@@ -216,12 +219,37 @@ public class MazeGeneration : MonoBehaviour
                 {
                     Vector3 position = new Vector3(x, 0, y);
                     Instantiate(floorCell, position, Quaternion.identity);
+
+                    Vector3 position1 = new Vector3(x, 2, y);
+                    Instantiate(ceilingCell, position1, Quaternion.identity);
                 }
 
                 else if (Grid[x,y] == 3)
                 {
                     Vector3 position = new Vector3(x, 0, y);
-                    Instantiate(finishCell, position, Quaternion.identity);
+                    Instantiate(floorCell, position, Quaternion.identity);
+
+                    Vector3 position1 = new Vector3(x, 2, y);
+                    Instantiate(ceilingCell, position1, Quaternion.identity);
+
+                    setX(x);
+                    setY(y);
+
+
+                    
+                    if (seedArray3[1] % 2 == 0)
+                    {
+                        //Vector3 position2 = new Vector3(x, 1, y + 1);
+                        //Instantiate(ExitCell, position2, Quaternion.identity);
+                        setDecider(1);
+                    }
+                    else if (seedArray3[1] % 2 == 1)
+                    {
+                       //Vector3 position2 = new Vector3(x + 1, 1, y);
+                       //Instantiate(ExitCell1, position2, Quaternion.identity);
+                        setDecider(2);
+                    }
+                    
                 }
 
 
@@ -454,6 +482,19 @@ public class MazeGeneration : MonoBehaviour
         }
 
         return Grid;
+    }
+
+    public void setX(int number)
+    {
+        xPos = number;
+    }
+    public void setY(int number)
+    {
+        yPos = number;
+    }
+    public void setDecider(int number)
+    {
+        decider = number;
     }
 
 

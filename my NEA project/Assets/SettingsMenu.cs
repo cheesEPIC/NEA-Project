@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
@@ -11,8 +12,18 @@ public class SettingsMenu : MonoBehaviour
     {
         audioMixer.SetFloat("volume", volume);
     }
+
     public void SetFullscren(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+
+
+    public static float gameSensitivity = 3;
+
+    public void setSensitivity(float number)
+    {
+        gameSensitivity = number;
     }
 }
